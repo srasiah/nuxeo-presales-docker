@@ -17,3 +17,9 @@ nuxeo_war
 
 # Stuff for dev
 .yo-rc.json
+
+# Stuff for docker
+docker.env
+/docker/logs/*
+.env*
+!.env.default
