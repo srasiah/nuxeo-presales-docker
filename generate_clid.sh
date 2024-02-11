@@ -14,10 +14,10 @@ mkdir -p ${TMP_DIR}
 chmod 777 ${TMP_DIR}
 
 CONF_DIR=$(readlink -f ./conf)
-
-NUXEO_CLID=$(grep '^NUXEO_CLID' ${NUXEO_ENV} | tail -n 1  | cut -d '=' -f2)
+NUXEO_CLID=$(grep '^NUXEO_CLID' ${NUXEO_ENV_SECRET} | tail -n 1  | cut -d '=' -f 2-4 | xargs)
 if [ -n "${NUXEO_CLID}" ]; then
-  echo "NUXEO_CLID appears to be configured in ${NUXEO_ENV} or your system environment.  Remove and then run this script again."
+  echo "NUXEO_CLID appears to be configured in ${NUXEO_ENV} or your system environment."
+  exit 0
   # exit 2
 fi
 
