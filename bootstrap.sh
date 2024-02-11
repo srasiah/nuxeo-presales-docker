@@ -248,7 +248,7 @@ else
 fi
 
 
-NUXEO_CLID=${NUXEO_CLID:-}
+NUXEO_CLID=${NUXEO_CLID :-}
 
 mkdir -p ${NX_STUDIO}/conf
 cp ${NX_STUDIO}/conf.d/*.conf ${NX_STUDIO}/conf
@@ -300,6 +300,7 @@ GIT_REPO=${REPO}
 GIT_BRANCH=${BRANCH}
 
 NUXEO_CLID=${NUXEO_CLID}
+
 EOF
 
 # Run everything in NX_STUDIO dir
