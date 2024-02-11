@@ -114,6 +114,8 @@ then
   FQDN="localhost"
 fi
 
+NUXEO_PORT=${PORT:8080}
+
 # Choose image
 # Cloud image is deprecated, just default to LTS
 IMAGE_TYPE="LTS"
@@ -283,7 +285,7 @@ NUXEO_IMAGE=${FROM_IMAGE}
 CONNECT_URL=https://connect.nuxeo.com/nuxeo/site/
 
 NUXEO_DEV=true
-NUXEO_PORT=8080
+NUXEO_PORT=${NUXEO_PORT}
 NUXEO_PACKAGES=${STUDIO_PACKAGE} ${AUTO_PACKAGES} ${NUXEO_PACKAGES:-}
 
 INSTALL_RPM=${INSTALL_RPM}
