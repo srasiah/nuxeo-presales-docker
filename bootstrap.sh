@@ -247,6 +247,9 @@ else
   git clone -b ${BRANCH} ${REPO} ${NX_STUDIO}
 fi
 
+
+NUXEO_CLID=${NUXEO_CLID:-}
+
 mkdir -p ${NX_STUDIO}/conf
 cp ${NX_STUDIO}/conf.d/*.conf ${NX_STUDIO}/conf
 echo ""
@@ -295,6 +298,8 @@ STUDIO_CREDENTIALS=${CREDENTIALS}
 
 GIT_REPO=${REPO}
 GIT_BRANCH=${BRANCH}
+
+NUXEO_CLID=${NUXEO_CLID}
 EOF
 
 # Run everything in NX_STUDIO dir
