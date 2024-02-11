@@ -10,8 +10,8 @@ fi
 
 if [ -e /docker-entrypoint-initnuxeo.d/log4j2.xml ]; then
   echo "Copying log configuration from init folder to server"
-  cp -vf /docker-entrypoint-initnuxeo.d/log4j2.xml /opt/nuxeo/server/lib/log4j2.xml || echo "Unable to copy user log configuration"
+  # cp -vf /docker-entrypoint-initnuxeo.d/log4j2.xml /opt/nuxeo/server/lib/log4j2.xml || echo "Unable to copy user log configuration"
 elif [ -e /opt/nuxeo/server/lib/log4j2.xml ]; then
   echo "Copying server log configuration to init folder"
-  cp -vf /opt/nuxeo/server/lib/log4j2.xml /docker-entrypoint-initnuxeo.d/log4j2.xml || echo "Unable to copy server log configuration"
+  # cp -vf /opt/nuxeo/server/lib/log4j2.xml /docker-entrypoint-initnuxeo.d/log4j2.xml || echo "Unable to copy server log configuration"
 fi

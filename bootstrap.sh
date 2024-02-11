@@ -5,7 +5,8 @@ BRANCH="lts2023-sr"
 DOCKER_PRIVATE="docker-private.packages.nuxeo.com"
 LTS_IMAGE="${DOCKER_PRIVATE}/nuxeo/nuxeo:2023"
 
-MONGO_VERSION="6.0"
+# MONGO_VERSION="6.0"
+MONGO_VERSION="4.4"
 OPENSEARCH_VERSION="1.3.11"
 
 OPENSEARCH_IMAGE="opensearchproject/opensearch:"${OPENSEARCH_VERSION}
