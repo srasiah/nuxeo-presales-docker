@@ -248,7 +248,7 @@ else
 fi
 
 
-NUXEO_CLID=${NUXEO_CLID :-}
+NUXEO_CLID=${NUXEO_CLID:-}
 
 mkdir -p ${NX_STUDIO}/conf
 cp ${NX_STUDIO}/conf.d/*.conf ${NX_STUDIO}/conf

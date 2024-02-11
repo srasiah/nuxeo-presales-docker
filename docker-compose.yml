@@ -32,6 +32,7 @@ services:
     volumes:
       - ./init:/docker-entrypoint-initnuxeo.d/:rw
       - ./conf:/etc/nuxeo/conf.d/:ro
+      - ./logs://var/log/nuxeo
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - /usr/bin/docker:/usr/bin/docker:ro
       # Optional, makes container startup faster after the first time
