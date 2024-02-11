@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO="https://github.com/srasiah/nuxeo-presales-docker"
-BRANCH="2023-dev-sr"
+BRANCH="lts2023-sr"
 DOCKER_PRIVATE="docker-private.packages.nuxeo.com"
 LTS_IMAGE="${DOCKER_PRIVATE}/nuxeo/nuxeo:2023"
 
