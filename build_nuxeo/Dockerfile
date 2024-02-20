@@ -31,17 +31,17 @@ ENV LANG="en_US.UTF-8" \
 #    dnf -y install mediainfo ffmpeg x264 x265 opus flac libvpx && dnf --enablerepo=crb -y install libvorbis-devel
 
 # Install Fonts
-RUN dnf -y install google-noto-sans-cjk-jp-fonts
+# RUN dnf -y install google-noto-sans-cjk-jp-fonts
 
 # Install newest version of imagemagick and icc color profiles
 # RUN dnf -y install https://rpms.remirepo.net/enterprise/remi-release-9.rpm \
 #    && dnf --enablerepo=remi -y install ImageMagick7
 
 #Install codecs for Imagemagick
-RUN dnf -y install librsvg2-tools && dnf --enablerepo=devel -y install libwebp-tools
+# RUN dnf -y install librsvg2-tools && dnf --enablerepo=devel -y install libwebp-tools
 
 # Dependencies for GLB thumbnail generation
-#RUN dnf -y install alsa-lib at-spi2-atk libX11 libXcomposite libXcursor libXdamage libXext libXi libXtst libXScrnSaver libXrandr libXrandr atk pango gtk3
+# RUN dnf -y install alsa-lib at-spi2-atk libX11 libXcomposite libXcursor libXdamage libXext libXi libXtst libXScrnSaver libXrandr libXrandr atk pango gtk3
 
 # Add additional RPMs to the source image
 RUN if [ -n "${INSTALL_RPM}" ]; then dnf -y install ${INSTALL_RPM}; fi
